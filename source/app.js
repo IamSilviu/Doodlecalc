@@ -9,7 +9,8 @@ Ext.application({
     name: 'DoodleCalc',
 
     requires: [
-        'Ext.MessageBox'
+        'Ext.MessageBox',
+        'Ext.draw.Component'
     ],
 
     views: ['Main','Doodle'],
