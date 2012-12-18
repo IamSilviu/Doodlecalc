@@ -8,3 +8,7 @@ Features:
 
 Devices support:
 - iPad 4, iPhone 5, Galaxy S3, and Microsoft Surface
+
+Authors: 
+- Sebastian Tomescu - stomescu@gmail.com
+- Silviu Durduc - iamsilviu@gmail.com
