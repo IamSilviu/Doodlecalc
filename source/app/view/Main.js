@@ -10,7 +10,7 @@ Ext.define('DoodleCalc.view.Main', {
 
         items: [
             {
-                title: 'Welcome',
+                title: 'Welcome ',
                 iconCls: 'home',
 
                 styleHtmlContent: true,
