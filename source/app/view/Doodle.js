@@ -1,10 +1,10 @@
-/* 
+﻿/* 
  * Doodle Canvas
  */
 
 Ext.define('DoodleCalc.view.Doodle',{
     extend: 'Ext.Panel',
-    alias: 'widget.Doodle',
+    xtype: 'doodle',
     
     config : {
        

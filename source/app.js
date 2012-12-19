@@ -6,6 +6,8 @@ Ext.Loader.setPath({
 //</debug>
 
 Ext.application({
+    controllers: ["Actions","Configs","Pattern","Math","Doodle"],
+	models: ["Keys","Patterns"],
     name: 'DoodleCalc',
 
     requires: [
@@ -13,7 +15,7 @@ Ext.application({
         'Ext.draw.Component'
     ],
 
-    views: ['Main','Doodle'],
+    views: ['Viewport','Doodle'],
 
     icon: {
         '57': 'resources/icons/Icon.png',
@@ -37,8 +39,8 @@ Ext.application({
         // Destroy the #appLoadingIndicator element
         Ext.fly('appLoadingIndicator').destroy();
 
-        // Initialize the main view
-        Ext.Viewport.add(Ext.create('DoodleCalc.view.Main'));
+        // Initialize the viewport view
+        Ext.Viewport.add(Ext.create('DoodleCalc.view.Viewport'));
     },
 
     onUpdated: function() {

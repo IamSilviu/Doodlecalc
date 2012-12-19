@@ -1,15 +1,13 @@
-Ext.define('DoodleCalc.view.Main', {
+Ext.define('DoodleCalc.view.Viewport', {
     extend: 'Ext.tab.Panel',
-    xtype: 'main',
-    requires: [
-        'Ext.TitleBar'
-    ],
+    xtype: 'viewport',
+	
     config: {
         tabBarPosition: 'bottom',
 
         items: [
             {
-                xtype: 'Doodle',
+                xtype: 'doodle',
                 title: 'Doodle',
                 iconCls: 'home'
             }
