@@ -1,5 +1,5 @@
 Ext.define('DoodleCalc.controller.Doodle', {
-    extend: 'Ext.app.Controller',
+    extend: 'DoodleCalc.controller.Pattern',
     
     config: {
         refs: {
@@ -11,6 +11,9 @@ Ext.define('DoodleCalc.controller.Doodle', {
         control: {
 			drawArea: {
 				initialize: 'onInitializeDrawArea'
+			},
+			'button[action=clearDraw]':{
+				tap: 'clearDraw'
 			}
         }
     },
@@ -116,11 +119,16 @@ Ext.define('DoodleCalc.controller.Doodle', {
 			cmp.getSurface().renderFrame();
 			this.sprite.destroy();
 			cmp.getSurface('overlay').renderFrame();
+			
+			// patternCtrl
+			this.guessKey(this.list);
+						
 			this.sprite = null;
 	},
 	
 	smoothenList: function(points) {
-        if (points.length < 3) {
+        
+		if (points.length < 3) {
             return ["M", points[0], points[1]];
         }
         var dx = [], dy = [], result = ['M'],
@@ -136,6 +144,12 @@ Ext.define('DoodleCalc.controller.Doodle', {
             result.push(dx[i], dy[i]);
         }
         return result;
-    }
+    },
+	
+	clearDraw: function(){
+		this.getDrawArea().getSurface().removeAll();
+		this.getDrawArea().getSurface('overlay').removeAll();
+		this.getDrawArea().renderFrame();
+	}
 	
 });

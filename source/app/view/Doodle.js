@@ -3,17 +3,10 @@
  */
 
 Ext.define('DoodleCalc.view.Doodle',{
-    extend: 'Ext.Panel',
+    extend: 'Ext.draw.Component',
     xtype: 'doodle',
     
-    config : {
-	
-        layout: 'fit',
+    config : {	      
 		
-        items: [
-            {
-                xtype: 'draw'
-            }
-        ]
     }
 });

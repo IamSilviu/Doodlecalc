@@ -8,6 +8,7 @@ Ext.Loader.setPath({
 Ext.application({
     controllers: ["Actions","Configs","Pattern","Math","Doodle"],
 	models: ["Keys"],
+	stores: ["Keys"],
     name: 'DoodleCalc',
 
     requires: [
@@ -15,7 +16,7 @@ Ext.application({
         'Ext.draw.Component'
     ],
 
-    views: ['Viewport','Doodle'],
+    views: ['Viewport','Doodle','Tools'],
 
     icon: {
         '57': 'resources/icons/Icon.png',
