@@ -7,7 +7,7 @@ Ext.Loader.setPath({
 
 Ext.application({
     controllers: ["Actions","Configs","Pattern","Math","Doodle"],
-	models: ["Keys","Patterns"],
+	models: ["Keys"],
     name: 'DoodleCalc',
 
     requires: [
