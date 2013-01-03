@@ -15,22 +15,26 @@ Ext.define('DoodleCalc.controller.Pattern', {
         
     },
 	
-	pattern: function(points){
+    pattern: function(points){
+    	
         var l = this.findLeft(points).x;
         var r = this.findRight(points).x;
         var t = this.findTop(points).y;
         var b = this.findBottom(points).y;
+        
         if((t-b)*3 < (r-l)){
             t = b + (r-l);
         }
         if((r-l)*3 < (t-b)){
             r = l + (t-b);
         }
+        
         var c1 = l + (r-l)/3;
         var c2 = l + (r-l)*(2/3);
         var r1 = b + (t-b)/3;
         var r2 = b + (t-b)*(2/3);
         var pts = [];
+        
         for(var i=0;i<points.length;i++){
             
 			var p = points[i];
@@ -62,7 +66,7 @@ Ext.define('DoodleCalc.controller.Pattern', {
         return pts;
     },
 	
-	findTop: function(points){
+    findTop: function(points){
         var top = points[0];
         for(var i=1;i<points.length;i++){
             if(top.y < points[i].y){
